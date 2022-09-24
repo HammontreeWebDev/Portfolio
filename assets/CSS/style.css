@@ -58,6 +58,18 @@ header {
     padding-right: 12px;
 }
 
+/* insert user feedback for nav links
+located in the header */
+.nav-links:hover {
+    font-style: oblique;
+    font-size: 150%;
+}
+
+.nav-links:active {
+    color: var(--main-bg);
+    font-size: 175%;
+}
+
 /* specifying the resume link to push the entire nav bar to the left */
 #nav-resume {
     margin-right: 80px;
@@ -114,22 +126,28 @@ main {
     font-size: 400%;
     font-weight: bold;
 }
+
 .content {
     margin-left: 3%;
     line-height: 1.5;
 }
+
 .italic {
     font-style: italic;
 }
+
+/* Enter all media queries below: */
 @media screen and (max-width:768px) {
-    #name{
+    #name {
         justify-content: center;
         width: 100%;
     }
+
     .navbar {
         justify-content: space-between;
         width: 100%;
     }
+
     /* removing margin to normalize look */
     #nav-resume {
         margin: 0%;
