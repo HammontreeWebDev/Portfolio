@@ -121,3 +121,17 @@ main {
 .italic {
     font-style: italic;
 }
+@media screen and (max-width:768px) {
+    #name{
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar {
+        justify-content: space-between;
+        width: 100%;
+    }
+    /* removing margin to normalize look */
+    #nav-resume {
+        margin: 0%;
+    }
+}
