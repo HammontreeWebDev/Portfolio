@@ -108,15 +108,16 @@ located in the header */
 }
 
 main {
-    display: flex;
+    display: inline-block;
     color: var(--main-text);
     margin-top: 0px;
+    margin-left: 8%;
+    margin-right: 6%;
 }
 
 .container {
     display: flex;
-    margin-top: 2%;
-    margin-left: 8%;
+    padding-top: 2%;
 }
 
 .heading {
@@ -125,18 +126,51 @@ main {
     align-items: flex-end;
     font-size: 400%;
     font-weight: bold;
-    border-right: solid var(--main-text);
-    padding-right: 1%;
+    padding-right: 2%;
 }
 
 .content {
-    margin-left: 3%;
+    display: flex;
+    flex-flow: column wrap;
     line-height: 1.5;
+    border-left: solid var(--main-text);
+    border-width: 3px;
+    padding-left: 2%;
 }
 
 .italic {
     font-style: italic;
 }
+
+.bigapp {
+    width: 100%;
+    height: 25%;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border: solid var(--light-blue);
+    border-width: 3px;
+}
+
+.lower {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1%;
+    justify-content: space-between;
+}
+
+.smallapp {
+    width: 49%;
+    height: 25%;
+    object-fit: cover;
+    border: solid var(--light-blue);
+    border-width: 3px;
+}
+/* additional margin equal to prev padding was
+added to properly line up borders */
+#Work {
+    margin-left: 2%;
+}
+
 
 /* Enter all media queries below: */
 @media screen and (max-width:768px) {
