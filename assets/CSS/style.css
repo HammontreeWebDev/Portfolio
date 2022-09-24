@@ -9,6 +9,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     background-color: var(--main-bg);
+    width: 100vw;
 }
 
 /* Changed hard-coded px header height
@@ -164,7 +165,7 @@ main {
 
 .smallapp {
     width: 49%;
-    height: 20%;
+    height: 21%;
     object-fit: cover;
     border: solid var(--light-blue);
     border-width: 3px;
@@ -178,6 +179,14 @@ main {
     padding-left: 2%;
     padding-right: 2%;
     width: 80%;
+}
+
+.plain {
+    color: var(--main-text);
+}
+
+.contact {
+    color: var(--main-text);
 }
 
 .contact:hover {
