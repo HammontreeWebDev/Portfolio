@@ -125,6 +125,8 @@ main {
     align-items: flex-end;
     font-size: 400%;
     font-weight: bold;
+    border-right: solid var(--main-text);
+    padding-right: 1%;
 }
 
 .content {
