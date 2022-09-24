@@ -1,49 +1,56 @@
 :root {
     --light-blue: #92ccce;
     --dark-grey: #31343d;
+    --main-text: #455877;
+    --main-bg: #eeeef7;
 }
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
+    background-color: var(--main-bg);
 }
+
+/* Changed hard-coded px header height
+It was preventing flexbox from working
+properly! */
 
 header {
     display: inline-flex;
     flex-flow: row wrap;
-    height: 80px;
     width: 100%;
     background-color: var(--dark-grey);
 }
 
 #name {
-    justify-content: flex-end;
-    flex-flow: row wrap;
-    color: #31343d;
-    background-color: var(--light-blue);
-    font-size: 211%;
-    font-weight: 900;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 60px;
-    padding-right: 15px;
-    padding-left: 3%;
-    border-radius: 50px;
-}
-
-.nav-container {
     display: inline-flex;
     justify-content: flex-end;
     flex-flow: row wrap;
-    font-size: 115%;
-    color: var(--light-blue);
-    line-height: 80px;
-    width: 100%;
-    position: absolute;
+    position: relative;
+    color: var(--dark-grey);
+    background-color: var(--light-blue);
+    font-size: 348%;
+    font-weight: 900;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    line-height: 60px;
+    padding-right: 15px;
+    padding-left: 6%;
+    border-radius: 50px;
 }
 
-.nav-section {
-    color: inherit;
+.navbar {
+    display: inline-flex;
+    justify-content: flex-end;
+    position: relative;
+    flex-flow: row wrap;
+    font-size: 115%;
+    line-height: 80px;
+    width: 60%;
+}
+
+.nav-links {
+    color: var(--light-blue);
     text-underline-offset: 40%;
     text-decoration-thickness: 3px;
     height: min-content;
@@ -51,12 +58,13 @@ header {
     padding-right: 12px;
 }
 
+/* specifying the resume link to push the entire nav bar to the left */
 #nav-resume {
     margin-right: 80px;
 }
 
 .subtitle {
-    font-size: 125%;
+    font-size: 145%;
     font-weight: bold;
     position: absolute;
     bottom: 20px;
@@ -84,4 +92,21 @@ header {
     path becomes broken */
     background-color: var(--dark-grey);
     position: relative;
+    margin-bottom: 0px;
+}
+
+main {
+    display: inline-block;
+    color: var(--main-text);
+    margin-top: 0px;
+}
+
+#AboutMe {
+    display: flex;
+}
+
+.heading {
+    font-size: 400%;
+    font-weight: bold;
+    justify-content: flex-end;
 }
