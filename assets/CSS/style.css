@@ -81,6 +81,7 @@ located in the header */
     background-size: 0 3px, 100% 3px;
     font-style: oblique;
     font-size: 150%;
+    text-shadow: var(--light-blue) 0 0 10px
 }
 
 .nav-links:active {
@@ -189,6 +190,7 @@ main {
 }
 
 .smallapp {
+    display: flex;
     width: 49%;
     height: 21%;
     object-fit: cover;
@@ -203,11 +205,19 @@ main {
 }
 
 .bigapp:hover {
-    box-shadow: 5px 10px 10px var(--main-text);
+    box-shadow: 0 0 50px 15px var(--main-text);
 }
 
 .smallapp:hover {
-    box-shadow: 5px 10px 10px var(--main-text);
+    box-shadow: 0 0 50px 15px var(--main-text);
+}
+
+.bigapp:active {
+    box-shadow: 0 0 50px 15px magenta;
+}
+
+.smallapp:active {
+    box-shadow: 0 0 50px 15px magenta;
 }
 
 #macbook h2,
@@ -298,6 +308,7 @@ main {
     background-size: 0 3px, 100% 3px;
     font-size: 150%;
     font-style: oblique;
+    text-shadow: var(--main-text) 0 0 10px
 }
 
 .feedback:active {
@@ -320,5 +331,44 @@ main {
     /* removing margin to normalize look */
     #nav-resume {
         margin: 0%;
+    }
+}
+/* Media Query for Nest Hub Max */
+@media screen and (max-width:1280px) {
+    .navbar {
+        width: 48%;
+    }
+
+    .heading {
+        font-size: 350%;
+    }
+}
+/* media query for nest hub */
+@media screen and (max-width:1024px) {
+    .navbar {
+        width: 52%;
+    }
+    #name {
+        font-size: 250%;
+    }
+    .heading {
+        font-size: 275%;
+    }
+}
+/* media query for samsung galaxy A51 */
+@media screen  and (max-width:412px) {
+    #name {
+        font-size: 150%;
+    }
+    .navbar {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        margin-bottom: 1%;
+    }
+    .nav-links {
+        padding-top: 1%;
+        padding-bottom: 1%;
     }
 }
