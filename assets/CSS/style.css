@@ -50,21 +50,35 @@ header {
     width: 60%;
 }
 
+/* set up hover effect. credit @ 
+https://css-tricks.com/css-link-hover-effects/ */
+
 .nav-links {
     color: var(--light-blue);
     text-decoration: none;
-    border-bottom: solid var(--light-blue);
-    border-width: 3px;
     height: min-content;
     padding-left: 1%;
     padding-right: 1%;
     padding-bottom: 5px;
     margin-left: 2%;
+    background:
+        linear-gradient(to right,
+            var(--light-blue),
+            var(--light-blue)),
+        linear-gradient(to right,
+            rgba(255, 0, 0, 1),
+            rgba(255, 0, 180, 1),
+            rgba(0, 100, 200, 1));
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
 }
 
 /* insert user feedback for nav links
 located in the header */
 .nav-links:hover {
+    background-size: 0 3px, 100% 3px;
     font-style: oblique;
     font-size: 150%;
 }
@@ -259,6 +273,7 @@ main {
     padding-left: 1%;
     padding-right: 1%;
 }
+
 .feedback {
     color: var(--main-text);
     text-decoration: none;
@@ -266,27 +281,24 @@ main {
     padding-left: 1%;
     padding-right: 1%;
     background:
-      linear-gradient(
-        to right,
-        var(--main-text),
-        var(--main-text)
-      ),
-      linear-gradient(
-        to right,
-        rgba(255, 0, 0, 1),
-        rgba(255, 0, 180, 1),
-        rgba(0, 100, 200, 1)
-    );
+        linear-gradient(to right,
+            var(--main-text),
+            var(--main-text)),
+        linear-gradient(to right,
+            rgba(255, 0, 0, 1),
+            rgba(255, 0, 180, 1),
+            rgba(0, 100, 200, 1));
     background-size: 100% 3px, 0 3px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
-  }
+}
 
 .feedback:hover {
     background-size: 0 3px, 100% 3px;
     font-size: 150%;
-  }
+    font-style: oblique;
+}
 
 .feedback:active {
     color: var(--light-blue);
