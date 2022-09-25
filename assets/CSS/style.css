@@ -174,6 +174,28 @@ main {
     object-position: 50% 30%;
 }
 
+.smallapp {
+    width: 49%;
+    height: 21%;
+    object-fit: cover;
+    border: solid var(--light-blue);
+    border-width: 3px;
+}
+
+.smallapp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bigapp:hover {
+    box-shadow: 5px 10px 10px var(--main-text);
+}
+
+.smallapp:hover {
+    box-shadow: 5px 10px 10px var(--main-text);
+}
+
 #macbook h2,
 #nintendo h2,
 #audio h2,
@@ -218,20 +240,6 @@ main {
     bottom: 4.5%;
 }
 
-.smallapp {
-    width: 49%;
-    height: 21%;
-    object-fit: cover;
-    border: solid var(--light-blue);
-    border-width: 3px;
-}
-
-.smallapp img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .card {
     display: flex;
     flex-flow: row wrap;
@@ -251,13 +259,36 @@ main {
     padding-left: 1%;
     padding-right: 1%;
 }
+.feedback {
+    color: var(--main-text);
+    text-decoration: none;
+    padding-bottom: 5px;
+    padding-left: 1%;
+    padding-right: 1%;
+    background:
+      linear-gradient(
+        to right,
+        var(--main-text),
+        var(--main-text)
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
 
-#feedback:hover {
-    font-style: oblique;
+.feedback:hover {
+    background-size: 0 3px, 100% 3px;
     font-size: 150%;
-}
+  }
 
-#feedback:active {
+.feedback:active {
     color: var(--light-blue);
     font-size: 175%;
 }
