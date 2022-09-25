@@ -139,6 +139,7 @@ main {
 }
 
 .content {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -164,6 +165,50 @@ main {
     object-position: 50% 30%;
     border: solid var(--light-blue);
     border-width: 3px;
+}
+
+#macbook h2,
+#nintendo h2,
+#audio h2,
+#tv h2,
+#picnic h2 {
+    font-size: 145%;
+    font-weight: bold;
+}
+
+#macbook,
+#nintendo,
+#audio,
+#tv,
+#picnic {
+    display: flex;
+    flex-flow: column wrap;
+    position: absolute;
+    background-color: var(--light-blue);
+    color: var(--main-text);
+    padding: 1%;
+}
+
+#macbook {
+    bottom: 52%;
+}
+
+#nintendo {
+    bottom: 28%;
+}
+
+#audio {
+    right: 38.3%;
+    bottom: 28%;
+}
+
+#tv {
+    bottom: 4.5%;
+}
+
+#picnic {
+    right: 44%;
+    bottom: 4.5%;
 }
 
 .smallapp {
