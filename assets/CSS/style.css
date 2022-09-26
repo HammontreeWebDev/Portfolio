@@ -17,36 +17,42 @@ It was preventing flexbox from working
 properly! */
 
 header {
-    display: inline-flex;
+    display: flex;
     flex-flow: row wrap;
+    align-items: center;
     width: 100vw;
     background-color: var(--dark-grey);
+    height: 15vh;
 }
 
 #name {
-    display: inline-flex;
+    display: flex;
     justify-content: flex-end;
+    align-items: center;
     flex-flow: row wrap;
     position: relative;
     color: var(--dark-grey);
     background-color: var(--light-blue);
-    font-size: 348%;
+    font-size: 330%;
     font-weight: 900;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    line-height: 60px;
-    padding-right: 15px;
-    padding-left: 6%;
+    height: 10vh;
+    width:37vw;
+    padding-right: 1%;
 }
 
+#name img {
+    height: 8vh;
+    border-radius: 100%;
+}
+
+
 .navbar {
-    display: inline-flex;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: relative;
     flex-flow: row wrap;
     font-size: 115%;
-    width: 60%;
+    width: 62vw;
 }
 
 /* set up hover effect. credit @ 
@@ -55,10 +61,9 @@ https://css-tricks.com/css-link-hover-effects/ */
 .nav-links {
     color: var(--light-blue);
     text-decoration: none;
-    height: min-content;
-    padding-left: 1%;
-    padding-right: 1%;
     padding-bottom: 5px;
+    padding-left: 1%;
+    padding-right:1%;
     margin-left: 2%;
     background:
         linear-gradient(to right,
@@ -304,6 +309,14 @@ main {
         width: 48%;
     }
 
+    #name {
+        width: 50%;
+    }
+    
+    #name img {
+        height: 80%;
+    }
+
     .heading {
         font-size: 350%;
     }
@@ -312,10 +325,7 @@ main {
 /* media query for nest hub */
 @media screen and (max-width:1024px),
 {
-.navbar {
-    width: 52%;
-}
-
+    
 #name {
     font-size: 250%;
 }
@@ -333,17 +343,20 @@ main {
 
 /* media query for surface pro 7 */
 @media screen and (max-width:912px) {
+   header {
+    height: 8vh;
+   }
     #name {
         font-size: 225%;
+        height: 6vh;
+    }
+
+    #name img {
+        height: 4vh;
     }
 
     .heading {
         font-size: 250%;
-    }
-
-    .navbar {
-        width: 52%;
-        justify-content: space-around;
     }
 
     /* removing margin to normalize look */
@@ -368,13 +381,13 @@ main {
 /* media query for iPad air */
 @media screen and (max-width:820px) {
     .navbar {
-        width: 50%;
+        width: 48%;
     }
 
     #name {
-        font-size: 200%;
+        font-size: 180%;
+        width: 45%;
     }
-
     .heading {
         font-size: 225%;
     }
@@ -393,6 +406,9 @@ main {
 
 /* media query for surface duo */
 @media screen and (max-width:540px) {
+    header {
+        height: auto;
+    }
     #name {
         font-size: 150%;
         width: 100%;
