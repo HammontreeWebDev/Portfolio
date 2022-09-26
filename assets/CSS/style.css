@@ -213,11 +213,11 @@ main {
 }
 
 .bigapp:active {
-    box-shadow: 0 0 50px 15px magenta;
+    box-shadow: 0 0 50px 15px var(--light-blue);
 }
 
 .smallapp:active {
-    box-shadow: 0 0 50px 15px magenta;
+    box-shadow: 0 0 50px 15px var(--light-blue);
 }
 
 #macbook h2,
@@ -317,22 +317,7 @@ main {
 }
 
 /* Enter all media queries below: */
-@media screen and (max-width:768px) {
-    #name {
-        justify-content: center;
-        width: 100%;
-    }
 
-    .navbar {
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    /* removing margin to normalize look */
-    #nav-resume {
-        margin: 0%;
-    }
-}
 /* Media Query for Nest Hub Max */
 @media screen and (max-width:1280px) {
     .navbar {
@@ -343,23 +328,88 @@ main {
         font-size: 350%;
     }
 }
+
 /* media query for nest hub */
-@media screen and (max-width:1024px) {
-    .navbar {
-        width: 52%;
-    }
+@media screen and (max-width:1024px),
+{
+.navbar {
+    width: 52%;
+}
+
+#name {
+    font-size: 250%;
+}
+
+.heading {
+    font-size: 275%;
+}
+}
+
+/* media query for surface pro 7 */
+@media screen and (max-width:912px) {
     #name {
+        font-size: 225%;
+    }
+
+    .heading {
         font-size: 250%;
     }
-    .heading {
-        font-size: 275%;
+
+    .navbar {
+        width: 52%;
+        justify-content: space-around;
+    }
+
+    /* removing margin to normalize look */
+    #nav-resume {
+        margin: 0%;
+    }
+
+    #Work {
+        height: 45vh;
+    }
+
+    .bigapp {
+        height: 40%;
+    }
+
+    .smallapp {
+        height: 25%;
+        width: 48%;
+    }
+
+    #macbook {
+        bottom: 58%;
+        left: 2.5%;
+    }
+
+    #nintendo {
+        bottom: 29.5%;
+        left: 2.5%;
+    }
+
+    #audio {
+        right: 38.3%;
+        bottom: 28%;
+    }
+
+    #tv {
+        bottom: 4.5%;
+    }
+
+    #picnic {
+        right: 44%;
+        bottom: 4.5%;
     }
 }
-/* media query for samsung galaxy A51 */
-@media screen  and (max-width:412px) {
+
+/* intial media query for samsung galaxy A51, surface duo */
+@media screen and (max-width:412px),
+(max-width:540px) {
     #name {
         font-size: 150%;
     }
+
     .navbar {
         width: 100%;
         display: flex;
@@ -367,20 +417,24 @@ main {
         align-items: center;
         margin-bottom: 1%;
     }
+
     .nav-links {
         padding-top: 1%;
         padding-bottom: 1%;
     }
+
     .subtitle {
         bottom: 5%;
         right: 10%;
     }
+
     .container {
         display: flex;
         flex-flow: column wrap;
         align-items: center;
         width: 100vw;
     }
+
     .heading {
         width: 100%;
         padding-right: 0%;
@@ -391,23 +445,28 @@ main {
         border-bottom: 6px solid var(--main-text);
         border-top: 6px solid var(--main-text);
     }
+
     .content {
         width: 90%;
-        padding: 3% 1% 0% 1%;  
+        padding: 3% 1% 0% 1%;
     }
+
     #Work {
         height: 100%;
     }
-    .smallapp{
+
+    .smallapp {
         width: 412px;
         height: 75px;
         margin-bottom: 3%;
     }
+
     .bigapp {
         height: 150px;
         width: 412px;
         margin-bottom: 3%;
     }
+
     .card {
         display: flex;
         flex-flow: column wrap;
@@ -415,23 +474,78 @@ main {
         justify-content: space-between;
         align-items: center;
         height: 200px;
-        
+
     }
-    #macbook{
+
+    #macbook {
         bottom: 75%;
     }
+
     #nintendo {
         bottom: 53%;
     }
+
     #audio {
         right: 53.8%;
         bottom: 36%;
     }
+
     #tv {
         bottom: 19%;
     }
+
     #picnic {
         right: 75%;
         bottom: 2%;
+    }
+}
+
+/* media query for Galaxy Fold */
+@media screen and (max-width:280px) {
+    .subtitle {
+        font-size: 100%;
+    }
+
+    #macbook h2,
+    #nintendo h2,
+    #audio h2,
+    #tv h2,
+    #picnic h2 {
+        font-size: 125%;
+        font-weight: bold;
+    }
+
+    #macbook,
+    #nintendo,
+    #audio,
+    #tv,
+    #picnic {
+        font-size: 75%;
+    }
+
+    #nintendo {
+        bottom: 52%;
+        left: 1.5%;
+    }
+
+    #audio {
+        right: 49.8%;
+        bottom: 35.2%;
+    }
+
+    #tv {
+        bottom: 18.5%;
+    }
+
+    #picnic {
+        right: 73.3%;
+        bottom: 1.5%;
+    }
+}
+
+/* additional media query for surface duo */
+@media screen and (max-width:540px) {
+    .subtitle {
+        right: 20%;
     }
 }
