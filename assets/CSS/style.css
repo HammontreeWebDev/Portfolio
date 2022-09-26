@@ -98,8 +98,8 @@ located in the header */
     font-size: 145%;
     font-weight: bold;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 5%;
+    right: 5%;
     background-color: var(--light-blue);
     color: var(--dark-grey);
     padding: 5px;
@@ -122,6 +122,9 @@ located in the header */
     /* background color set in case img
     path becomes broken */
     background-color: var(--dark-grey);
+    /* set relative position as this is the parent
+    element fot class subtitle which is 
+    absoulutely positioned */
     position: relative;
     margin-bottom: 0px;
 }
@@ -174,6 +177,11 @@ main {
 }
 
 .bigapp {
+    /* parent element to absolutely positioned
+    aside id ; must be relative as parent so that
+    absolutely positioned element doesn't go bananas when
+    screen size is scaled down*/
+    position: relative;
     display: flex;
     width: 100%;
     height: 50%;
@@ -190,6 +198,9 @@ main {
 }
 
 .smallapp {
+        /* parent element to absolutely positioned
+    aside id's */
+    position: relative;
     display: flex;
     width: 49%;
     height: 21%;
@@ -377,37 +388,36 @@ main {
         height: 25%;
         width: 48%;
     }
+}
 
-    #macbook {
-        bottom: 58%;
-        left: 2.5%;
+/* media query for iPad air */
+@media screen and (max-width:820px) {
+    .navbar {
+        width: 50%;
     }
-
-    #nintendo {
-        bottom: 29.5%;
-        left: 2.5%;
+    #name {
+        font-size: 200%;
     }
-
-    #audio {
-        right: 38.3%;
-        bottom: 28%;
+    .heading {
+        font-size: 225%;
     }
-
-    #tv {
-        bottom: 4.5%;
+}
+/* media query for ipad mini */
+@media screen and (max-width:768px){
+    #name {
+        font-size: 185%;
     }
-
-    #picnic {
-        right: 44%;
-        bottom: 4.5%;
+    .heading {
+        font-size: 210%;
     }
 }
 
-/* intial media query for samsung galaxy A51, surface duo */
-@media screen and (max-width:412px),
-(max-width:540px) {
+/* media query for surface duo */
+@media screen and (max-width:540px) {
     #name {
         font-size: 150%;
+        width: 100%;
+        justify-content: center;
     }
 
     .navbar {
@@ -424,8 +434,7 @@ main {
     }
 
     .subtitle {
-        bottom: 5%;
-        right: 10%;
+        font-size: 125%;
     }
 
     .container {
@@ -436,10 +445,12 @@ main {
     }
 
     .heading {
-        width: 100%;
+        /* made width the same size as content
+        to provide a better flow */
+        width: 90%;
         padding-right: 0%;
-        padding-bottom: 1%;
-        padding-top: 1%;
+        padding-bottom: 2%;
+        padding-top: 2%;
         border-right: none;
         align-items: center;
         border-bottom: 6px solid var(--main-text);
@@ -456,14 +467,14 @@ main {
     }
 
     .smallapp {
-        width: 412px;
+        width: 100%;
         height: 75px;
         margin-bottom: 3%;
     }
 
     .bigapp {
         height: 150px;
-        width: 412px;
+        width: 100%;
         margin-bottom: 3%;
     }
 
@@ -475,77 +486,5 @@ main {
         align-items: center;
         height: 200px;
 
-    }
-
-    #macbook {
-        bottom: 75%;
-    }
-
-    #nintendo {
-        bottom: 53%;
-    }
-
-    #audio {
-        right: 53.8%;
-        bottom: 36%;
-    }
-
-    #tv {
-        bottom: 19%;
-    }
-
-    #picnic {
-        right: 75%;
-        bottom: 2%;
-    }
-}
-
-/* media query for Galaxy Fold */
-@media screen and (max-width:280px) {
-    .subtitle {
-        font-size: 100%;
-    }
-
-    #macbook h2,
-    #nintendo h2,
-    #audio h2,
-    #tv h2,
-    #picnic h2 {
-        font-size: 125%;
-        font-weight: bold;
-    }
-
-    #macbook,
-    #nintendo,
-    #audio,
-    #tv,
-    #picnic {
-        font-size: 75%;
-    }
-
-    #nintendo {
-        bottom: 52%;
-        left: 1.5%;
-    }
-
-    #audio {
-        right: 49.8%;
-        bottom: 35.2%;
-    }
-
-    #tv {
-        bottom: 18.5%;
-    }
-
-    #picnic {
-        right: 73.3%;
-        bottom: 1.5%;
-    }
-}
-
-/* additional media query for surface duo */
-@media screen and (max-width:540px) {
-    .subtitle {
-        right: 20%;
     }
 }
