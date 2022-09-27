@@ -36,8 +36,9 @@ header {
     font-size: 330%;
     font-weight: 900;
     height: 10vh;
-    width:37vw;
+    width: auto;
     padding-right: 1%;
+    padding-left: 1%;
 }
 
 #name img {
@@ -64,7 +65,7 @@ https://css-tricks.com/css-link-hover-effects/ */
     text-decoration: none;
     padding-bottom: 5px;
     padding-left: 1%;
-    padding-right:1%;
+    padding-right: 1%;
     margin-left: 2%;
     background:
         linear-gradient(to right,
@@ -304,49 +305,69 @@ main {
 
 /* Enter all media queries below: */
 
+/* media query to fix navbar */
+@media screen and (max-width:1638px) {
+    .navbar {
+        width: 55%;
+    }
+}
+
+/* media query to fix name in header */
+@media screen and (max-width:1593px) {
+    #name {
+        font-size: 250%;
+    }
+}
+
+/* media query to fix content borders lining up properly */
+@media screen and (max-width:1585px) {
+    .heading {
+        font-size: 350%;
+    }
+}
+
+/* media query to fix content borders lining up properly */
+@media screen and (max-width:1214px) {
+    .heading {
+        font-size: 275%;
+    }
+}
+
 /* Media Query for Nest Hub Max */
 @media screen and (max-width:1280px) {
     .navbar {
         width: 48%;
     }
 
-    #name {
-        width: 50%;
-    }
-    
     #name img {
         height: 80%;
     }
+}
 
-    .heading {
-        font-size: 350%;
+/* media query for nest hub . added additional query for 1179px to debug name not resizing on
+desktop*/
+@media screen and (max-width:1024px),
+(max-width:1179px) {
+
+    #name {
+        font-size: 250%;
+    }
+
+    .apptitle h2 {
+        font-size: 125%;
+    }
+
+    .apptitle {
+        font-size: 85%;
     }
 }
 
-/* media query for nest hub */
-@media screen and (max-width:1024px),
-{
-    
-#name {
-    font-size: 250%;
-}
+/* media query to fix navbar wrapping outside of vh and border lineup issue*/
+@media screen and (max-width: 948px) {
+    header {
+        height: 8vh;
+    }
 
-.heading {
-    font-size: 275%;
-}
-.apptitle h2 {
-    font-size: 125%;
-}
-.apptitle {
-    font-size: 85%;
-}
-}
-
-/* media query for surface pro 7 */
-@media screen and (max-width:912px) {
-   header {
-    height: 8vh;
-   }
     #name {
         font-size: 225%;
         height: 6vh;
@@ -356,14 +377,17 @@ main {
         height: 4vh;
     }
 
-    .heading {
-        font-size: 250%;
-    }
-
     /* removing margin to normalize look */
     #nav-resume {
         margin: 0%;
     }
+    .heading {
+        font-size: 250%;
+    }
+}
+
+/* media query for surface pro 7 */
+@media screen and (max-width:912px) {
 
     #Work {
         height: 45vh;
@@ -379,6 +403,13 @@ main {
     }
 }
 
+/* media query to fix content borders lining up properly */
+@media screen and (max-width:878px) {
+    .heading {
+        font-size: 225%;
+    }
+}
+
 /* media query for iPad air */
 @media screen and (max-width:820px) {
     .navbar {
@@ -387,10 +418,6 @@ main {
 
     #name {
         font-size: 180%;
-        width: 45%;
-    }
-    .heading {
-        font-size: 225%;
     }
 }
 
@@ -405,11 +432,13 @@ main {
     }
 }
 
-/* media query for surface duo */
-@media screen and (max-width:540px) {
+/* media query for surface duo , added additional query for 767px to debug resize on desktop*/
+@media screen and (max-width:540px),
+(max-width:767px) {
     header {
         height: auto;
     }
+
     #name {
         font-size: 150%;
         width: 100%;
@@ -488,8 +517,9 @@ main {
 
     }
 }
+
 /* media query for galaxy fold */
-@media screen and (max-width:280px){
+@media screen and (max-width:280px) {
     .subtitle {
         font-size: 110%;
     }
