@@ -199,7 +199,7 @@ main {
 .bigapp img {
     width: 100%;
     object-fit: cover;
-    object-position: 50% 30%;
+    object-position: 50% 21%;
 }
 
 .smallapp {
